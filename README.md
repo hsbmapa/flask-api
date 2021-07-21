@@ -44,7 +44,7 @@ pytest -v tests.py
 def health():
     return "Success"
 ```
-> As a running webpage defaults to a 200 response, there is no need to specify a 200 response on the health endpoint, hence it will only show "Success"
+*  As a running webpage defaults to a 200 response, there is no need to specify a 200 response on the health endpoint, hence it will only show "Success"
 
 ### A simple elite 'math' endpoint using multiplication to multiply the posted number (in JSON payload) by 1337 and return the result in JSON
 * Max limit on returned value is 10,000,000
