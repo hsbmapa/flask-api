@@ -62,6 +62,9 @@ def health():
         return "Invalid JSON", 400
     ```
     ```python
+    try:
+        num = int(req_data['num'])
+        ...
     except:
         return "Input value not an integer", 400
     ```
