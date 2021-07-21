@@ -7,8 +7,12 @@ def app():
     app = api
     return app
 
-def test_int(client):
+def test_float(client):
     response = client.post('/math', json={"num": "3.1"})
+    assert response.status_code == 400
+
+def test_alpha(client):
+    response = client.post('/math', json={"num": "abc"})
     assert response.status_code == 400
 
 def test_limit(client):
